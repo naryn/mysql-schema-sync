@@ -233,6 +233,7 @@ func (sc *SchemaSync) SyncSQL4Dest(sqlStr string, sqls []string) error {
 				if err != nil {
 					break
 				}
+				ret.Close()
 			}
 			if err == nil {
 				err = tx.Commit()
